@@ -14,7 +14,7 @@ const navbar = (props: Props) => {
           </a>
         </div>
         <div className=" xs:hidden ">
-          <ul className="flex">
+          <ul className="flex gap-1">
             <li>
               <a href="/" title="Homepage">
                 Home
