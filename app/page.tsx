@@ -1,9 +1,11 @@
 export default function Home() {
-  return <>
-    <main>
-      <b>
-       <h1 className="bg-slate-500 color-white text-white text-6xl">Hello World</h1>
-      </b>
-    </main>
-  </>;
+  return (
+    <>
+      <main>
+        <b>
+          <h1 className="font-serif text-2xl">Hello World</h1>
+        </b>
+      </main>
+    </>
+  );
 }
