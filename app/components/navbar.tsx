@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -6,9 +8,9 @@ type Props = {};
 const navbar = (props: Props) => {
   return (
     <>
-      <nav className=" w-screen h-16 flex justify-around items-center ">
-        <div className=" w-screen max-w-6xl bg-transparent flex justify-between items-center">
-          <div>
+      <nav className=" w-screen h-16 flex justify-center items-center ">
+        <div className=" w-screen max-w-6xl bg-transparent flex justify-between items-center p-5 ">
+          <div className=" justify-start">
             <a href="/" title="Homepage">
               <h1 className="text-3xl font-extrabold ">
                 Syntax
@@ -19,37 +21,73 @@ const navbar = (props: Props) => {
               {/* <Image src="" alt="" width={300} height={50} /> */}
             </a>
           </div>
-          <div className=" xs:hidden ">
+
+          <button
+            className="xl:hidden flex flex-col justify-evenly h-8 w-8 border-none bg-black cursor-pointer p-0"
+            aria-label="Menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <span className="block w-full h-[3px] bg-dark rounded-md transform origin-center transition duration-300 ease-in-out"></span>
+            <span className="block w-full h-[3px] bg-dark rounded-md transform origin-center transition duration-300 ease-in-out"></span>
+            <span className="block w-full h-[3px] bg-dark rounded-md transform origin-center transition duration-300 ease-in-out"></span>
+          </button>
+
+          <div className="xl:flex hidden 3xl ">
             <ul className="text-xl flex items-center">
-              <li className=" transition-all px-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-orange via-red to-pink">
-                <a href="/" title="Homepage">
+              <li className="px-2 ">
+                <Link
+                  href="/"
+                  title="Homepage"
+                  className="transition-all duration-300 ease-in-out w-0 hover:w-full border border-transparent border-b-2 hover:border-b-red hover:text-red"
+                >
                   Home
-                </a>
+                </Link>
               </li>
-              <li className=" transition-all px-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-orange via-red to-pink">
-                <a href="/products" title="Our Products">
+              <li className="px-2">
+                <Link
+                  href="/products"
+                  title="Our Products"
+                  className="transition-all duration-300 ease-in-out w-0 hover:w-full border border-transparent border-b-2 hover:border-b-red hover:text-red"
+                >
                   Products
-                </a>
+                </Link>
               </li>
-              <li className=" transition-all px-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-orange via-red to-pink">
-                <a href="/courses" title="Our Courses">
+              <li className="px-2">
+                <Link
+                  href="/courses"
+                  title="Our Courses"
+                  className="transition-all duration-300 ease-in-out w-0 hover:w-full border border-transparent border-b-2 hover:border-b-red hover:text-red"
+                >
                   Courses
-                </a>
+                </Link>
               </li>
-              <li className=" transition-all px-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-orange via-red to-pink">
-                <a href="/blog" title="Our Blog">
+              <li className="px-2">
+                <Link
+                  href="/blog"
+                  title="Our Blog"
+                  className="transition-all duration-300 ease-in-out w-0 hover:w-full border border-transparent border-b-2 hover:border-b-red hover:text-red"
+                >
                   Blog
-                </a>
+                </Link>
               </li>
-              <li className=" transition-all px-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-orange via-red to-pink">
-                <a href="/about" title="About Us">
+              <li className="px-2">
+                <Link
+                  href="/about"
+                  title="About Us"
+                  className="transition-all duration-300 ease-in-out w-0 hover:w-full border border-transparent border-b-2 hover:border-b-red hover:text-red"
+                >
                   About
-                </a>
+                </Link>
               </li>
-              <li className=" transition-all px-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-orange via-red to-pink">
-                <a href="/contact" title="Contact Us">
+              <li className="px-2">
+                <Link
+                  href="/contact"
+                  title="Contact Us"
+                  className="transition-all duration-300 ease-in-out w-0 hover:w-full border border-transparent border-b-2 hover:border-b-red hover:text-red"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

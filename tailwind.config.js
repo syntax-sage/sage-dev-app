@@ -9,6 +9,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    "ease-in-out":"transition-timing-function: ease-in-out",
     colors: {
       "transparent":"transparent",
       "light": "#BEC8CF",
