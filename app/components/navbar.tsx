@@ -2,13 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useState } from "react";
 
 type Props = {};
 
 const navbar = (props: Props) => {
+  const [openMenu, isOpen] = useState(false);
   return (
     <>
-      <nav className=" w-screen h-16 flex justify-center items-center ">
+      <nav className=" w-screen h-16 flex justify-center items-center z-50">
         <div className=" w-screen max-w-6xl bg-transparent flex justify-between items-center p-5 ">
           <div className=" justify-start">
             <a href="/" title="Homepage">
@@ -22,20 +24,44 @@ const navbar = (props: Props) => {
             </a>
           </div>
 
+          {/* mobile menu hamburger toggle button  */}
           <button
             className="xl:hidden flex flex-col justify-evenly h-8 w-8 border-none bg-black cursor-pointer p-0"
             aria-label="Menu"
             aria-expanded="false"
             type="button"
+            onClick={() => isOpen(!openMenu)}
           >
             <span className="block w-full h-[3px] bg-dark rounded-md transform origin-center transition duration-300 ease-in-out"></span>
             <span className="block w-full h-[3px] bg-dark rounded-md transform origin-center transition duration-300 ease-in-out"></span>
             <span className="block w-full h-[3px] bg-dark rounded-md transform origin-center transition duration-300 ease-in-out"></span>
           </button>
 
-          <div className="xl:flex hidden 3xl ">
-            <ul className="text-xl flex items-center">
-              <li className="px-2 ">
+          <div
+            onClick={() => isOpen(false)}
+            className={` ${
+              openMenu
+                ? "absolute flex flex-col w-full h-full shadow top-0  bg-light left-0  text-center gap-5 right-0 ml-auto text-lg bold"
+                : "xl:flex xl:relative hidden 3xl flex-row"
+            }`}
+          >
+            <button
+              className={`${
+                openMenu
+                  ? "absolute top-5 right-5 flex flex-col justify-evenly h-8 w-8 border-none bg-black cursor-pointer p-0"
+                  : "hidden"
+              }`}
+              aria-label="Menu"
+              aria-expanded="false"
+              type="button"
+              onClick={() => isOpen(false)}
+            >
+              <span className="block w-full h-[3px] rotate-45  translate-y-[11px] bg-red rounded-md transform origin-center transition duration-300 ease-in-out"></span>
+              <span className="block w-full h-[3px] -rotate-45 bg-red rounded-md transform origin-center transition duration-300 ease-in-out"></span>
+            </button>
+
+            <ul className="relative w-full flex flex-col mt-16 mb-16 gap-3 xl:flex-row">
+              <li className="px-2 w-full">
                 <Link
                   href="/"
                   title="Homepage"
@@ -90,6 +116,10 @@ const navbar = (props: Props) => {
                 </Link>
               </li>
             </ul>
+
+            <div className="relative xl:hidden p-0 ">
+              <h3>JOIN A GROWING COMMUNITY</h3>
+            </div>
           </div>
         </div>
       </nav>
