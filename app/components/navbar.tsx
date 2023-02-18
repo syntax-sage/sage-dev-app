@@ -41,8 +41,8 @@ const navbar = (props: Props) => {
             onClick={() => isOpen(false)}
             className={` ${
               openMenu
-                ? "absolute flex flex-col w-full h-full shadow top-0  bg-light left-0  text-center gap-5 right-0 ml-auto text-lg bold"
-                : "xl:flex xl:relative hidden 3xl flex-row"
+                ? "absolute flex flex-col w-full h-full  top-0  bg-light left-0  text-center gap-5 right-0 ml-auto text-lg "
+                : "xl:flex xl:relative hidden flex-row"
             }`}
           >
             <button
@@ -60,7 +60,7 @@ const navbar = (props: Props) => {
               <span className="block w-full h-[3px] -rotate-45 bg-red rounded-md transform origin-center transition duration-300 ease-in-out"></span>
             </button>
 
-            <ul className="relative w-full flex flex-col mt-16 mb-16 gap-3 xl:flex-row">
+            <ul className="relative w-full flex flex-col mt-16 mb-16 gap-3 xl:flex-row text-bold xl:medium">
               <li className="px-2 w-full">
                 <Link
                   href="/"
