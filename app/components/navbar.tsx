@@ -16,7 +16,7 @@ type Props = {};
 const navbar = (props: Props) => {
   const [openMenu, isOpen] = useState(false);
   return (
-    <nav className=" w-screen h-16 flex justify-center items-center z-[99]">
+    <nav className=" fixed w-screen h-16 flex justify-center items-center z-[99] bg-light">
       <div className=" w-screen max-w-6xl bg-transparent flex justify-between items-center pl-5 ">
         <div className=" justify-start">
           <a href="/" title="Homepage">
@@ -47,8 +47,8 @@ const navbar = (props: Props) => {
           onClick={() => isOpen(false)}
           className={` ${
             openMenu
-              ? "absolute flex flex-col w-full h-full  top-0  bg-light left-0  text-center gap-5 right-0 ml-auto text-lg z-50"
-              : "xl:flex xl:relative hidden flex-row"
+              ? "absolute flex flex-col w-screen h-screen  top-0  bg-light left-0  text-center gap-5 right-0 ml-auto text-lg z-50"
+              : "xl:flex xl:relative hidden flex-row xl:w-full xl:h-full"
           }`}
         >
           <button
@@ -66,7 +66,7 @@ const navbar = (props: Props) => {
             <span className="block w-full h-[3px] -rotate-45 bg-red rounded-md transform origin-center transition duration-300 ease-in-out"></span>
           </button>
 
-          <ul className="relative w-full bg-light flex flex-col mt-16 mb-16 gap-3 xl:flex-row font-bold xl:font-medium">
+          <ul className="relative w-screen flex flex-col mt-16 mb-16 gap-3 xl:flex-row font-bold xl:font-medium">
             <li className="px-2 w-full">
               <Link
                 href="/"
@@ -123,7 +123,7 @@ const navbar = (props: Props) => {
             </li>
           </ul>
 
-          <div className="relative xl:hidden p-0 ">
+          <div className="relative xl:hidden p-0 text-[20px]">
             <h3 className="font-bold">JOIN A GROWING COMMUNITY</h3>
             <span className="flex flex-row gap-5 justify-center text-[25px]">
               <Link

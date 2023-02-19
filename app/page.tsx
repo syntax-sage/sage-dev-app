@@ -12,7 +12,7 @@ import { CgScrollV } from "react-icons/cg";
 export default function Home() {
   return (
     <>
-      <main className="z-1 flex flex-col max-w-6xl mx-auto text-center items-center">
+      <main className="fixed z-10 flex flex-col max-w-6xl mx-auto text-center items-center mt-16 mb-8 h-[844px]">
         <h1 className="relative font-bold text-[34px] mt-8 max-w-lg lg:max-w-full">
           Embark on a journey of wonder and discover the <br />
           <span className="text-transparent font-black bg-clip-text bg-gradient-to-br from-orange via-red to-pink">
@@ -20,31 +20,31 @@ export default function Home() {
           </span>
         </h1>
 
-        <div className="z-1 flex w-full flex-col justify-evenly mt-8 px-16 gap-5 max-w-md lg:max-w-3xl lg:flex-row">
+        <div className="z-10 flex w-full flex-col justify-evenly mt-8 px-16 gap-5 max-w-md lg:max-w-3xl lg:flex-row">
           <Link
             href="/products"
             title="Our Products"
-            className="  z-1 shadow-md shadow-light bg-dark rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg transition-all duration-300 "
+            className="  z-10 shadow-md shadow-light bg-dark rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg transition-all duration-300 "
           >
             View Our Products
           </Link>
           <Link
             href="/products"
             title="Our Products"
-            className="transition-all duration-300 z-1 bg-gradient-to-br from-orange via-red to-pink rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg shadow-light shadow-md"
+            className="w-full transition-all duration-300 z-10  text-dark bg-gradient-to-br from-orange via-red to-pink rounded-md px-5 py-2  font-black uppercase shadow-md shadow-light hover:shadow-lg hover:shadow-medium "
           >
             View Our Courses
           </Link>
         </div>
         <Image
-          className="rounded-md mt-8 object-cover w-[320px] h-[310px] shadow-md shadow-[#c0ccd6] xl:absolute xl:-right-[20%] xl:mx-auto xl:h-[1000px] xl:w-[1000px] xl:object-contain xl:top-0 xl:shadow-none xl:z-0"
+          className="rounded-md mt-8 object-cover w-[320px] h-[310px] shadow-md shadow-[#c0ccd6] xl:fixed xl:-right-[20%] xl:mx-auto xl:h-[1000px] xl:w-[1000px] xl:object-contain xl:top-0 xl:shadow-none xl:-z-50 xl:mt-0"
           src="/largeImage.png"
           alt={"syntaxsage wallpaper image"}
           width={1000}
           height={1000}
         />
 
-        <div className="relative p-0 mt-8 text-[20px]">
+        <div className="relative p-0 mt-8 text-[20px] z-100">
           <h3 className="font-bold">JOIN A GROWING COMMUNITY</h3>
           <span className="flex flex-row gap-5 justify-center text-[25px]">
             <Link
@@ -98,8 +98,13 @@ export default function Home() {
             </Link>
           </span>
         </div>
-        <CgScrollV className="mt-8 text-3xl"></CgScrollV>
       </main>
+      <section className="bg-[#fff] absolute w-screen h-[2376px] top-[844px] rounded-[30px] overflow-hidden shadow-lg shadow-[rgba(0,0,0,0.5)] mb-8 z-50 rounded-b-none">
+        <div className="bg-light w-[200px] h-[8px] m-5  mt-10 rounded-[10px] mx-auto"></div>
+        <h2 className=" mt-8 uppercase font-bold text-center text-3xl ">
+          Choose from a variety of products and services
+        </h2>
+      </section>
     </>
   );
 }
