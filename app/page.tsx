@@ -12,7 +12,7 @@ import { CgScrollV } from "react-icons/cg";
 export default function Home() {
   return (
     <>
-      <main className="z-0 flex flex-col max-w-6xl mx-auto text-center items-center">
+      <main className="z-1 flex flex-col max-w-6xl mx-auto text-center items-center">
         <h1 className="relative font-bold text-[34px] mt-8 max-w-lg lg:max-w-full">
           Embark on a journey of wonder and discover the <br />
           <span className="text-transparent font-black bg-clip-text bg-gradient-to-br from-orange via-red to-pink">
@@ -20,25 +20,24 @@ export default function Home() {
           </span>
         </h1>
 
-        <div className="z-0 flex w-full flex-col justify-evenly mt-8 px-16 gap-5 max-w-md lg:max-w-3xl lg:flex-row">
+        <div className="z-1 flex w-full flex-col justify-evenly mt-8 px-16 gap-5 max-w-md lg:max-w-3xl lg:flex-row">
           <Link
             href="/products"
             title="Our Products"
-            className="  z-0 shadow-md shadow-light bg-dark rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg transition-all duration-300 "
+            className="  z-1 shadow-md shadow-light bg-dark rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg transition-all duration-300 "
           >
             View Our Products
           </Link>
           <Link
             href="/products"
             title="Our Products"
-            className="transition-all duration-300 z-0 bg-gradient-to-br from-orange via-red to-pink rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg shadow-light shadow-md"
+            className="transition-all duration-300 z-1 bg-gradient-to-br from-orange via-red to-pink rounded-md px-5 py-2 text-light font-black uppercase hover:shadow-medium hover:shadow-lg shadow-light shadow-md"
           >
             View Our Courses
           </Link>
         </div>
-
         <Image
-          className="rounded-md  border-light mt-8 object-cover w-[320px] h-[310px] shadow-xl-light "
+          className="rounded-md mt-8 object-cover w-[320px] h-[310px] shadow-md shadow-[#c0ccd6] xl:absolute xl:-right-[40%] xl:mx-auto xl:h-[1000px] xl:w-[1000px] xl:object-contain xl:top-0 xl:shadow-none xl:z-0"
           src="/images/largeImage.png"
           alt={"syntaxsage wallpaper image"}
           width={1000}

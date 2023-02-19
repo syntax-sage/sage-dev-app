@@ -12,7 +12,7 @@ module.exports = {
     "ease-in-out":"transition-timing-function: ease-in-out",
     colors: {
       "transparent":"transparent",
-      "light": "#c0ccd6",
+      "light": "#bfc9d1",
       "dark": "#111111",
       "medium": "#222222",
       "red": "#BF4055",
