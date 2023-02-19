@@ -45,7 +45,7 @@ export default function Home() {
           height={1000}
         />
 
-        <div className="relative xl:hidden p-0 mt-8 text-[20px]">
+        <div className="relative p-0 mt-8 text-[20px]">
           <h3 className="font-bold">JOIN A GROWING COMMUNITY</h3>
           <span className="flex flex-row gap-5 justify-center text-[25px]">
             <Link
