@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <Image
           className="rounded-md mt-8 object-cover w-[320px] h-[310px] shadow-md shadow-[#c0ccd6] xl:absolute xl:-right-[20%] xl:mx-auto xl:h-[1000px] xl:w-[1000px] xl:object-contain xl:top-0 xl:shadow-none xl:z-0"
-          src="/images/largeImage.png"
+          src="/largeImage.png"
           alt={"syntaxsage wallpaper image"}
           width={1000}
           height={1000}
