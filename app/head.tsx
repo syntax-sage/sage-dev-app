@@ -2,7 +2,7 @@ export default function Head() {
   return (
     <>
       <title>Syntax Sage</title>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta http-equiv="x-ua-compatible" content="ie=edge; chrome=1" />
       <meta
         content="width=device-width, initial-scale=1, user-scalable=no"
